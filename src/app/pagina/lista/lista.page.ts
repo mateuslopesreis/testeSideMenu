@@ -7,8 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListaPage implements OnInit {
 
-  img1 = "/assets/Hanamich.png";
-  img2 ="/assets/rukawajpg";
+  nome = "Sakuragi Hanamich";
+  avatar =  "/assets/hanamich.png";
+
+
+  jogador = [
+    {
+      nome: "Sakuragi Hanamich",
+      avatar: "/assets/hanamich.png",
+      curtidas: "30"
+
+    },
+    {
+      nome: "Kaede Rukawa",
+      avatar: "/assets/rukawa.jpg",
+      curtidas: "15"
+
+    }
+  ]
 
   constructor() { }
 

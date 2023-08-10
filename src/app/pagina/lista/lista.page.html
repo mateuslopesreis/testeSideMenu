@@ -8,16 +8,27 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-list>
+  <ion-list *ngFor="let j of jogador">
     <ion-item>
-        <ion-label>Hanamich</ion-label>
+        <ion-label>{{j.nome}}</ion-label>
+        <ion-avatar slot="start">
+            <ion-img src="{{j.avatar}}"></ion-img>
+        </ion-avatar>
+        <ion-badge slot="end" color="danger">{{j.curtidas}}</ion-badge>
     </ion-item>
-    <ion-item>
-      <ion-label>Gori</ion-label>
-  </ion-item>
+  
   </ion-list> 
- 
+  <br><br>
 
- <ion-img src="/assets/hanamich.png"></ion-img> 
- <ion-img src="/assets/rukawa.jpg"></ion-img>
+  <ion-card  *ngFor="let j of jogador">
+      <ion-img alt="Foto do gênio" src="{{j.avatar}}"></ion-img>
+      <ion-card-header>
+        <ion-card-title>{{j.nome}}</ion-card-title>
+        <ion-card-subtitle>O gênio</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        Hanamichi Sakuragi é um delinquente muito impopular entre as garotas, tendo sido rejeitado surpreendentemente cinquenta vezes. Em seu primeiro ano na Shohoku High School, ele se apaixona por Haruko Akagi, que, ao reconhecer a capacidade atlética de Sakuragi, o apresenta ao time de basquete Shohoku. Sakuragi reluta em entrar no time no início, mas ele se mostra um atleta nato e se junta ao time, principalmente na esperança de impressionar e se aproximar de Haruko.
+      </ion-card-content>
+  </ion-card>
+
 </ion-content>
