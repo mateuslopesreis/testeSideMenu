@@ -8,12 +8,16 @@ import { ToastController } from '@ionic/angular';
 })
 export class CadastroPage implements OnInit {
 
+  public pessoa ={
+    nome: ""
+  }
+
   constructor(private toast: ToastController) { }
 
   async presentToast(position: 'top' | 'middle' | 'bottom') {
     const toast = await this.toast.create({
-      message: 'Hello World!',
-      duration: 1500,
+      message: 'Bem vindo '+this.pessoa.nome,
+      duration: 2000,
       position: position,
     });
 
